@@ -12,4 +12,6 @@ app.use(express.static('./dist/exercise-all-cloud'));
 app.get('/*', function(req, res) {
     res.sendFile('index.html', {root: 'dist/exercise-all-cloud/'});
     });
-  app.listen(process.env.PORT || 8080);
+  //app.listen(process.env.PORT || 8080);
+
+  app.listen(process.env.PORT || port);
