@@ -1,0 +1,46 @@
+<h2 class="listTitle">List of users</h2>
+
+<div class="buttonUser">
+    <button class="btnGetUser" (click)="getUser()">get user</button>
+</div>
+
+<div class="divUser">
+
+    <div class="viewUser" *ngFor="let u of users;let i=index">
+        <p class="title"><u>{{i+1}}</u></p>
+        <p><b>id:</b> {{u.id.value}}</p>
+        <p><b>gender:</b> {{u.gender}}</p>
+        <p><b>name:</b> {{u.name.first +" "+ u.name.last}}</p>
+        <p><b>phone:</b> {{u.phone}}</p>
+        <p><b>email:</b> {{u.email}}</p>
+        <div>
+            <button (click)="editUser(i)">edit user</button>
+            <button (click)="deleteUser(i)">delete user</button>
+        </div>
+
+    </div>
+</div>
+<div class="divAdd">
+    <p class="title"><b>Add</b></p>
+    <p>id:<input #idValue></p>
+    <p>gender: <input #gender></p>
+    <p>first name:<input #firstName></p>
+    <p>last name:<input #lastName></p>
+    <p>phone:<input #phone> </p>
+    <p>email:<input #email></p>
+    <button class="btn" (click)="addUser(firstName.value,lastName.value,idValue.value,gender.value,phone.value,email.value);
+    idValue.value = '';gender.value = '';firstName.value = '';lastName.value = '';phone.value = '';email.value = ''">
+        add user</button>
+
+</div>
+
+<div class="divEdit" *ngIf="userForEdit">
+    <p class="title"><b>Edit</b></p>
+    <p>first name:<input [(ngModel)]="userForEdit.name.first"></p>
+    <p>last name:<input [(ngModel)]="userForEdit.name.last"></p>
+    <p>id:<input [(ngModel)]="userForEdit.id.value"></p>
+    <p>gender: <input [(ngModel)]="userForEdit.gender"></p>
+    <p>phone:<input [(ngModel)]="userForEdit.phone"> </p>
+    <p>email:<input [(ngModel)]="userForEdit.email"></p>
+    <button class="btn" (click)="OKEdit()">edit</button>
+</div>

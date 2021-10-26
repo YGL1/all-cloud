@@ -1,0 +1,54 @@
+.viewUser{
+    border: 2px dashed black ;
+    width: 250px;
+    float: left;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+    
+    
+}
+.buttonUser{
+    float: left;
+    margin-top: 10px;
+   margin-left: 40%;
+   width: 15%;
+   
+    
+    
+}
+.divAdd{
+    border: 2px solid black ;
+    width: 290px;
+    float: left;
+    padding-left: 2%;
+
+}
+.btnGetUser{
+     width: 100%;
+     height: 100%;
+}
+.divUser{
+   /* border:1px solid red; */
+   height: 300px;
+    float: none;
+    display: inline-block;
+    margin-top: 1%;
+   
+}
+.divEdit{
+    border: 2px solid black ;
+    width: 290px;
+    float: left;
+    padding-left: 2%;
+    margin-left :1%;
+}
+.title{
+    text-align: center;
+}
+.btn{
+    margin-left: 30%;
+}
+.listTitle{
+    text-align: center;
+}
