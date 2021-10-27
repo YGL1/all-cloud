@@ -12,7 +12,7 @@ app.use(express.static('./dist/exercise-all-cloud'));
 // app.use(express.static(path.join(__dirname, './build')));
 app.get('/', function(req, res) {
     console.log("Hello1111111111111111111111");
-    res.sendFile('index.html', {root: './dist/exercise-all-cloud/'});
+    res.sendFile('index.html', {root: '../dist/exerciseAllCloud/'});
     // res.sendFile(path.join(__dirname, '../dist/exercise-all-cloud/index.html'));
 
     console.log("Hello222222222222222222222");
