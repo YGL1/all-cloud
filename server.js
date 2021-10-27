@@ -11,7 +11,9 @@ app.use(requireHTTPS);
 app.use(express.static('./dist/exercise-all-cloud'));
 app.get('/*', function(req, res) {
     console.log("Hello1111111111111111111111");
-    res.sendFile('index.html', {root: 'dist/exercise-all-cloud/'});
+    // res.sendFile('index.html', {root: 'dist/exercise-all-cloud/'});
+    res.sendFile(path.join(__dirname, '/dist/exercise-all-cloud/index.html'));
+
     console.log("Hello222222222222222222222");
     });
 app.listen(process.env.PORT || 8080);
