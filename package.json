@@ -4,10 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "webpack",
+    "build": "ng build -prod -aot && gulp",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "preinstall": "npm install @angular/compiler-cli --save && npm install --save @angular/cli@latest",
+    "postinstall": "ng build"
   },
   "private": true,
   "dependencies": {
